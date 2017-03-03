@@ -15,5 +15,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atuggle/SimpleReactAjax.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atuggle/SimpleReactAjax/issues"
+  },
+  "homepage": "https://github.com/atuggle/SimpleReactAjax#readme",
+  "description": ""
 }

@@ -12,7 +12,7 @@ export class Countries extends Component {
         };
 
         this.handleChange = this.handleChange.bind(this);
-    }
+    };
 
     getInitialState = function() {
         return {
@@ -27,7 +27,7 @@ export class Countries extends Component {
             .then((response) => {
                 this.setState({countryOptions: response});
             }).catch((error) => {console.log(error);});
-    }
+    };
 
     componentDidMount = function () {
         this.getCountryData();

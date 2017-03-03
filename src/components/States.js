@@ -8,12 +8,11 @@ export class States extends Component {
             stateOptions: [],
             countryCode: ''
         };
-    }
+    };
 
     getStateData(countryCode) {
         if (countryCode) {
             let data = 'country=' + countryCode;
-            console.log(data);
             fetch('https://xc-ajax-demo.herokuapp.com/api/states/',
                 {
                     method: "POST",
@@ -36,12 +35,11 @@ export class States extends Component {
                     console.log(error);
                 });
         }
-    }
+    };
 
     componentWillReceiveProps(nextProps) {
-        this.getStateData(nextProps.countryCode);
-
-        if (nextProps.countryCode !== this.state.countryCode) {
+        if (nextProps.countryCode !== this.props.countryCode) {
+            this.getStateData(nextProps.countryCode);
             this.setState({ countryCode: nextProps.countryCode });
         }
     };
@@ -68,7 +66,7 @@ export class States extends Component {
                 </select>
             </div>
         );
-    }
+    };
 }
 
 export default States;
